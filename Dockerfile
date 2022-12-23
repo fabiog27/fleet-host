@@ -10,6 +10,7 @@ WORKDIR /home/fleet
 # copy setup scripts
 COPY setup/oh-my-zsh.sh setup/oh-my-zsh.sh
 COPY setup/asdf.sh setup/asdf.sh
+RUN chmod u+x -R setup
 
 # oh-my-zsh
 RUN ["/bin/zsh", "/setup/oh-my-zsh.sh"]
