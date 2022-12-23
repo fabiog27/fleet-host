@@ -9,12 +9,16 @@ WORKDIR /home/fleet
 
 # copy setup scripts
 COPY setup/oh-my-zsh.sh setup/oh-my-zsh.sh
+COPY setup/asdf-plugin-deps.sh setup/asdf-plugin-deps.sh
 COPY setup/asdf.sh setup/asdf.sh
-RUN chmod a+x -R setup
+RUN chmod 777 -R setup
 
 # copy entrypoint script
 COPY entrypoint.sh entrypoint.sh
 RUN chmod a+x entrypoint.sh
+
+# install asdf global dependencies
+RUN ["/bin/zsh", "setup/asdf-plugin-deps.sh"]
 
 USER fleet
 
