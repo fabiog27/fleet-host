@@ -1,7 +1,7 @@
 FROM alpine:3
 
 # globally required packages
-RUN apk update && apk add git curl zsh bash coreutils
+RUN apk update && apk add git curl zsh bash coreutils openssh
 COPY install-asdf-deps.sh install-asdf-deps.sh
 RUN ["/bin/sh", "install-asdf-deps.sh"]
 
