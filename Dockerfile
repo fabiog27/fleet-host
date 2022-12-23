@@ -21,7 +21,8 @@ RUN echo "# asdf setup" >> ~/.zshrc && \
     echo "fpath=(\${ASDF_DIR}/completions \$fpath)" >> ~/.zshrc && \
     echo "autoload -Uz compinit && compinit" >> ~/.zshrc
 
-RUN ["/bin/zsh", "setup-asdf.sh"] 
+RUN ["/bin/zsh", "setup-asdf.sh"]
+
 # fleet
 RUN curl -LSs "https://download.jetbrains.com/product?code=FLL&release.type=preview&release.type=eap&platform=linux_x64" --output fleet && chmod +x fleet
 RUN mkdir workspace
