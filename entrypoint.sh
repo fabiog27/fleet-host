@@ -3,10 +3,9 @@
 zparseopts -D -git-repo:=o_git_repo
 
 PROJECT_DIR=/home/fleet/workspace
-SSH_KEY=
 
+echo "-------------------------------------------------"
 if [ -n "${o_git_repo[2]+1}" ]; then
-
     echo "Specified git repo: ${o_git_repo[2]}"
 
     HOST_NAME=$(echo $o_git_repo[2] | sed -E 's/^.*@(.*):.*$/\1/')
@@ -35,9 +34,11 @@ if [ -n "${o_git_repo[2]+1}" ]; then
         git clone $o_git_repo[2]
 
     fi
+    echo "Launching Fleet with project dir ${PROJECT_DIR}"
+else
+    echo "No git repo specified, launching with empty workspace directory"
 fi
-
-echo "Launching Fleet with project dir ${PROJECT_DIR}"
+echo "-------------------------------------------------"
 
 /home/fleet/fleet launch workspace -- \
     --auth=accept-everyone --publish --enableSmartMode \
