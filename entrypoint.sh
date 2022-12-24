@@ -9,7 +9,7 @@ SSH_KEY=
 
 if [ -n "${o_git_repo[2]+1}" ]; then
     echo "Specified git repo: ${o_git_repo[2]}"
-    HOST_NAME=$(cat $o_git_repo[2] | sed -E 's/^.*@(.*):.*$/\1/')
+    HOST_NAME=$(echo $o_git_repo[2] | sed -E 's/^.*@(.*):.*$/\1/')
     echo "Host name: ${HOST_NAME}"
     SSH_KEYSCAN_OUTPUT=$(ssh-keyscan -H $HOST_NAME)
     echo "Keyscan output:"
