@@ -9,11 +9,11 @@ SSH_KEY=
 
 if [ -n "${o_git_repo[2]+1}" ]; then
     echo "Specified git repo: ${o_git_repo[2]}"
+    HOST_NAME=$(cat o_git_repo | sed -E 's/^.*@(.*):.*$/\1/')
+    ssh-keyscan -H $HOST_NAME >> ~/.ssh/known_hosts
     PROJECT_DIR=$(echo "$(pwd)/${o_git_repo[2]}")
     if [ -n "${o_ssh_key[2]+1}" ]; then
         echo "Using ssh key: ${o_ssh_key[2]}"
-        HOST_NAME=$(cat o_git_repo | sed -E 's/^.*@(.*):.*$/\1/')
-        ssh-keyscan -H $HOST_NAME >> ~/.ssh/known_hosts
         mkdir -p ~/.ssh
         echo $o_ssh_key[2] > /home/fleet/.ssh/id_git
         SSH_KEY=$o_ssh_key[2]
