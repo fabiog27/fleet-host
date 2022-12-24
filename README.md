@@ -14,7 +14,7 @@ a more comfortable shell experience and [asdf](https://github.com/asdf-vm/asdf) 
 development dependencies.
 
 There's currently a bug (probably with Fleet) that results in the default shell being ignored,
-so whenever you open a terminal with fleet, you first have to run `/bin/zsh` to get oh-my-oh
+so whenever you open a terminal with fleet, you first have to run `/bin/zsh` to get oh-my-zsh
 and asdf support.
 
 For asdf, the plugins for nodejs, yarn, ruby and java are preinstalled, but there are no
