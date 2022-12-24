@@ -22,6 +22,7 @@ if [ -n "${o_git_repo[2]+1}" ]; then
     if [ -n "${o_ssh_key[2]+1}" ]; then
         echo "Using ssh key: ${o_ssh_key[2]}"
         echo $o_ssh_key[2] > /home/fleet/.ssh/id_git
+        chmod 600 /home/fleet/.ssh/id_git
         SSH_KEY=$o_ssh_key[2]
         git clone $o_git_repo[2] --config core.sshCommand="ssh -i /home/fleet/.ssh/id_git"
     else
