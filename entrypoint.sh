@@ -22,7 +22,7 @@ if [ -n "${o_git_repo[2]+1}" ]; then
 
     PROJECT_DIR=$(echo "$(pwd)/${FOLDER_NAME}")
 
-    if [ -f ~/.ssh/id_git && -f ~/.ssh/id_git.pub ]; then
+    if [[ -f ~/.ssh/id_git && -f ~/.ssh/id_git.pub ]]; then
 
         echo "Using ssh key"
         chmod 600 /home/fleet/.ssh/id_git
