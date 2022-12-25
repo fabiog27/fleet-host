@@ -28,10 +28,20 @@ if [ -n "${o_git_repo[2]+1}" ]; then
         chmod 600 /home/fleet/.ssh/id_git.pub
         git clone $o_git_repo[2] --config core.sshCommand="ssh -i /home/fleet/.ssh/id_git"
 
+        if [ $? != 0 ]; then
+            echo "Failure cloning, exiting"
+            exit
+        fi
+
     else
 
         echo "Proceeding to clone without ssh key"
         git clone $o_git_repo[2]
+
+        if [ $? != 0 ]; then
+            echo "Failure cloning, exiting"
+            exit
+        fi
 
     fi
     echo "Launching Fleet with project dir ${PROJECT_DIR}"
