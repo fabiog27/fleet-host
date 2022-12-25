@@ -2,7 +2,7 @@
 
 This repo contains shell scripts and a Dockerfile to build a docker image ready to
 [run Jetbrains Fleet on a remote server in a docker container](https://www.jetbrains.com/help/fleet/install-on-a-remote-machine.html).
-Fleet is an IDE that supports remote collaboration - but it also provides the access
+Fleet is an IDE that supports remote collaboration - but it also provides access
 to the host's filesystem. Thus, it's ideal to run it remotely in a docker container with
 limited permissions.
 
