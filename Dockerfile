@@ -1,7 +1,7 @@
 FROM alpine:3
 
 # install globally required packages
-RUN apk update && apk add git curl zsh bash coreutils openssh
+RUN apk update && apk add git curl zsh bash coreutils openssh vim
 
 # setup user
 RUN adduser -D -s /bin/zsh fleet
