@@ -14,3 +14,4 @@ asdf plugin add yarn
 asdf plugin add python
 asdf plugin add ruby
 asdf plugin add java
+asdf plugin add rust

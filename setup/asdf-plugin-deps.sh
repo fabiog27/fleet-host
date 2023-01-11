@@ -17,3 +17,6 @@ apk add bash curl git musl-locales \
 
 # Java #
 apk add bash curl unzip jq
+
+# Rust #
+apk add gcc

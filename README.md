@@ -17,7 +17,7 @@ There's currently a bug (probably in Fleet) that results in the default shell be
 so whenever you open a terminal with Fleet, you first have to run `/bin/zsh` to get oh-my-zsh
 and asdf support.
 
-For asdf, the plugins for nodejs, yarn, ruby and java are preinstalled. There aren't any
+For asdf, the plugins for nodejs, yarn, ruby, rust and java are preinstalled. There aren't any
 preinstalled versions. The user has permissions to install more plugins and any versions
 you need.
 
