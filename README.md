@@ -8,7 +8,7 @@ limited permissions.
 
 ## Preinstalled dependencies
 
-The docker image is based on Alpine Linux and has a few typical dependencies installed.
+The docker image is based on Ubuntu and has a few typical dependencies installed.
 Additionally, the shell is setup with [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) for
 a more comfortable experience and [asdf](https://github.com/asdf-vm/asdf) to install
 development dependencies.
