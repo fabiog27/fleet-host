@@ -1,10 +1,10 @@
-FROM alpine:3
+FROM ubuntu:jammy
 
 # install globally required packages
-RUN apk update && apk add git curl zsh bash coreutils openssh vim
+RUN apt update && apt install -y git curl zsh bash coreutils openssh-client vim
 
 # setup user
-RUN adduser -D -s /bin/zsh fleet
+RUN adduser --disabled-password --quiet --gecos "" --shell /bin/zsh fleet
 WORKDIR /home/fleet
 
 # copy setup scripts

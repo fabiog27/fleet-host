@@ -1,22 +1,18 @@
 ### Install plugin dependencies ###
 
-# Yarn #
-apk add tar gpg gpg-agent
-
 # Python #
-apk add build-essential libssl-dev zlib1g-dev \
-    libbz2-dev libreadline-dev libsqlite3-dev curl llvm \
-    libncursesw5-dev xz-utils tk-dev libxml2-dev \
-    libxmlsec1-dev libffi-dev liblzma-dev libsasl2-dev \
-    python3-dev libldap2-dev
+
+apt install -y dpkg-dev build-essential python-dev python3-dev libncursesw5-dev libsqlite3-dev \
+               libreadline-dev libbz2-dev libffi-dev libssl-dev libgdbm-dev zlib1g-dev libjpeg-dev \
+               libtiff-dev libpq-dev libxml2-dev libxslt1-dev libsdl2-dev libgstreamer-plugins-base1.0-dev \
+               libnotify-dev freeglut3-dev libsm-dev libgtk-3-dev libwebkitgtk-3.0-dev libxtst-dev
 
 # Ruby #
-apk add bash curl git musl-locales \
-    automake libffi yaml openssl-dev \
-    zlib-dev gcc g++ make
+apt install -y autoconf bison patch build-essential rustc libssl-dev libyaml-dev libreadline6-dev \
+               zlib1g-dev libgmp-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev uuid-dev
 
 # Java #
-apk add bash curl unzip jq
+apt install -y bash curl unzip jq
 
 # Rust #
-apk add gcc
+apt install -y gcc
